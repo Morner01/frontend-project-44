@@ -37,7 +37,7 @@ const startGame = (description, answer, wrong, rounds, name) => {
   for (let i = 0; i < rounds; i += 1) {
     const temp = answer();
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer == temp) { //
+    if (userAnswer === temp) { //
       points += 1;
       console.log('Correct!');
     } else if (userAnswer !== temp) {
@@ -45,7 +45,7 @@ const startGame = (description, answer, wrong, rounds, name) => {
       break;
     }
   }
-  if (points === 3) {
+  if (points === rounds) {
     console.log(`Congratulations, ${name}!`);
   }
 };
