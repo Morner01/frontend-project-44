@@ -32,10 +32,10 @@ import readlineSync from 'readline-sync';
 // correct; // правильно
 // rounds // кол-во раундов
 const startGame = (description, answer, wrong, rounds, name) => {
-  console.log(description); // тут вывести описание игры
   let points = 0;
   for (let i = 0; i < rounds; i += 1) {
     const temp = answer();
+    console.log(description());
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === temp) { //
       points += 1;

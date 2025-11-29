@@ -13,7 +13,7 @@ const startGcdGame = () => {
   const answer = () => {
     const numb1 = Math.floor(Math.random() * 100);
     const numb2 = Math.floor(Math.random() * 100);
-    console.log(numb1, numb2)
+    console.log(numb1, numb2);
     const correctAnswer = NOD(numb1, numb2);
     return correctAnswer;
   };

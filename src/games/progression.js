@@ -7,7 +7,7 @@ const generateProgression = (minLength = 3, maxLength = 10) => {
   const difference = Math.floor(Math.random() * 99);
   const hiddenElementIndex = Math.floor(Math.random() * progressionLength);
 
-  let progression = [];
+  const progression = [];
   for (let i = 0; i < progressionLength; i++) {
     progression.push(start + i * difference);
   }
@@ -15,7 +15,7 @@ const generateProgression = (minLength = 3, maxLength = 10) => {
   const hiddenElement = progression[hiddenElementIndex];
   progression[hiddenElementIndex] = '..';
   return { progression, hiddenElement };
-}
+};
 
 const startProgressionGame = () => {
   const name = HelloUser();
