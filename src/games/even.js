@@ -11,13 +11,20 @@ const startEvenGame = () => {
     return { question, correctAnswer };
   };
 
+  const gameRound = () => {
+    const { question, correctAnswer } = getQuestionAndAnswer();
+    return { question, correctAnswer };
+  };
+
   const description = () => {
-    const { question } = getQuestionAndAnswer();
+    // генерируем один вопрос
+    const { question } = gameRound();
     return question;
   };
 
   const answer = () => {
-    const { correctAnswer } = getQuestionAndAnswer();
+    // генерируем тот же вопрос, чтобы получить правильный ответ
+    const { correctAnswer } = gameRound();
     return correctAnswer;
   };
 
