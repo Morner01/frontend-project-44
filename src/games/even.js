@@ -1,8 +1,8 @@
-import HelloUser from '../cli.js';
+import helloUser from '../cli.js';
 import startGame from '../index.js';
 
 const startEvenGame = () => {
-  const name = HelloUser();
+  const name = helloUser();
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   let currentNumber = 0;

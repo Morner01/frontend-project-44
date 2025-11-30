@@ -1,8 +1,8 @@
-import HelloUser from '../cli.js';
+import helloUser from '../cli.js';
 import startGame from '../index.js';
 
 const startCalcGame = () => {
-  const name = HelloUser();
+  const name = helloUser();
   const description = 'What is the result of the expression?';
 
   const answer = () => {

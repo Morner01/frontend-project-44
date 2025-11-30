@@ -1,4 +1,4 @@
-import HelloUser from '../cli.js';
+import helloUser from '../cli.js';
 import startGame from '../index.js';
 
 const NOD = (x, y) => {
@@ -8,7 +8,7 @@ const NOD = (x, y) => {
 };
 
 const startGcdGame = () => {
-  const name = HelloUser();
+  const name = helloUser();
   const description = 'Find the greatest common divisor of given numbers.';
   const answer = () => {
     const numb1 = Math.floor(Math.random() * 100);

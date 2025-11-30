@@ -1,4 +1,4 @@
-import HelloUser from '../cli.js';
+import helloUser from '../cli.js';
 import startGame from '../index.js';
 
 const primeNumber = (num) => {
@@ -16,7 +16,7 @@ const primeNumber = (num) => {
 };
 
 const startPrimeGame = () => {
-  const name = HelloUser();
+  const name = helloUser();
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const answer = () => {

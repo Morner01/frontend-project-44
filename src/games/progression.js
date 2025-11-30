@@ -1,4 +1,4 @@
-import HelloUser from '../cli.js';
+import helloUser from '../cli.js';
 import startGame from '../index.js';
 
 const generateProgression = (minLength = 5, maxLength = 10) => {
@@ -19,7 +19,7 @@ const generateProgression = (minLength = 5, maxLength = 10) => {
 };
 
 const startProgressionGame = () => {
-  const name = HelloUser();
+  const name = helloUser();
   const description = 'What number is missing in the progression?';
 
   const answer = () => {
