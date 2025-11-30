@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 const startGame = (description, answer, wrong, rounds, name) => {
-  let points = 0;
+  let points = 0; // счетчик правильных ответов
   console.log(description);
   for (let i = 0; i < rounds; i += 1) {
     const { num, answerStr } = answer();
