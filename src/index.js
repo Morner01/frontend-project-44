@@ -2,13 +2,13 @@ import readlineSync from 'readline-sync';
 
 const startGame = (description, answer, wrong, rounds, name) => {
   let points = 0;
+      console.log(description);
   for (let i = 0; i < rounds; i += 1) {
     const { num, answerStr } = answer();
-    console.log(description);
     console.log(`Question: ${num}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer === answerStr) {
+    if (userAnswer == answerStr) {
       points += 1;
       console.log('Correct!');
     } else {
