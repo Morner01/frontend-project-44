@@ -5,7 +5,7 @@ const generateProgression = (minLength = 5, maxLength = 10) => {
   const progressionLength = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
   const start = Math.floor(Math.random() * 99);
   const difference = Math.floor(Math.random() * 99);
-  const hiddenElementIndex = Math.floor(Math.random() * progressionLength);
+  const hiddenElementIndex = Math.floor(Math.random() * (progressionLength - 2)) + 1;
 
   const progression = [];
   for (let i = 0; i < progressionLength; i++) {
