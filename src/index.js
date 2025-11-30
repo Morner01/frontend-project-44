@@ -8,7 +8,7 @@ const startGame = (description, answer, wrong, rounds, name) => {
     console.log(`Question: ${num}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer == answerStr) {
+    if (userAnswer === String(answerStr)) {
       points += 1;
       console.log('Correct!');
     } else {
