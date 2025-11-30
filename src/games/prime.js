@@ -18,14 +18,14 @@ const primeNumber = (num) => {
 const startPrimeGame = () => {
   const name = HelloUser();
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
   const answer = () => {
-    const numb1 = Math.floor(Math.random() * 100);
-    console.log(numb1);
-    const correctAnswer = primeNumber(numb1);
-    return correctAnswer;
+    const numb = Math.floor(Math.random() * 100);
+    const correctAnswer = primeNumber(numb);
+    return { num: numb, answerStr: correctAnswer };
   };
-  const wrong = (userAnswer, correctAnswer) => `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.
-      Let's try again, ${name}!`;
+
+  const wrong = (userAnswer, correctAnswer) => `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${name}!`;
 
   startGame(description, answer, wrong, 3, name);
 };

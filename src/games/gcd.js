@@ -13,12 +13,10 @@ const startGcdGame = () => {
   const answer = () => {
     const numb1 = Math.floor(Math.random() * 100);
     const numb2 = Math.floor(Math.random() * 100);
-    console.log(numb1, numb2);
     const correctAnswer = NOD(numb1, numb2);
-    return correctAnswer;
+    return { num: `${numb1} ${numb2}`, answerStr: String(correctAnswer) };
   };
-  const wrong = (userAnswer, correctAnswer) => `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.
-      Let's try again, ${name}!`;
+  const wrong = (userAnswer, correctAnswer) => `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${name}!`;
   startGame(description, answer, wrong, 3, name);
 };
 

@@ -14,19 +14,26 @@ const generateProgression = (minLength = 3, maxLength = 10) => {
 
   const hiddenElement = progression[hiddenElementIndex];
   progression[hiddenElementIndex] = '..';
+
   return { progression, hiddenElement };
 };
 
 const startProgressionGame = () => {
   const name = HelloUser();
   const description = 'What number is missing in the progression?';
+
   const answer = () => {
     const { progression, hiddenElement } = generateProgression();
-    console.log(progression);
-    return hiddenElement;
+    // Передать прогрессию как строку
+    const question = progression.join(' ');
+    return {
+      num: question,
+      answerStr: String(hiddenElement),
+    };
   };
-  const wrong = (userAnswer, correctAnswer) => `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.
-        Let's try again, ${name}!`;
+
+  const wrong = (userAnswer, correctAnswer) => `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${name}!`;
+
   startGame(description, answer, wrong, 3, name);
 };
 
